@@ -7,7 +7,13 @@ export const useUserStore = defineStore('user', {
     state: () => ({
         isAuthenticated: false,
         error: '',
+        isOpen: false,
     }),
+    getters: {
+      modalToggle() {
+          return this.isOpen
+      }
+    },
     actions: {
         async login(username, password) {
 
@@ -34,6 +40,9 @@ export const useUserStore = defineStore('user', {
         logout() {
             localStorage.clear()
             this.isAuthenticated = false
+        },
+        closeModal(arg) {
+            this.isOpen = arg
         }
     }
 })

@@ -6,18 +6,20 @@
     <div class="flex items-center justify-center">
       <div>
 
-        <h1>Login Page</h1>
-        <div class="p-4">
+        <h1 class="text-center mb-4 font-semibold text-4xl">Login Page</h1>
+        <div class="py-4 px-10 rounded-xl bg-white bg-transparent">
           <form @submit.prevent="handleLogin">
-            <div>
-              <label for="username">Username:</label>
-              <input type="text" id="username" name="username" v-model="username" required>
+            <div class="flex flex-col">
+              <label for="username" class="mb-1">Username:</label>
+              <input type="text" id="username" name="username" v-model="username" class="px-2 py-1 border border-black rounded-lg" required>
             </div>
-            <div>
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="password" v-model="password" required>
+            <div class="flex flex-col">
+              <label for="password" class="mb-1">Password:</label>
+              <input type="password" id="password" name="password" v-model="password" class="px-2 py-1 border border-black rounded-lg" required>
             </div>
-            <button type="submit">Login</button>
+            <div class="flex items-center justify-end mt-3">
+              <button type="submit" class="px-3 py-1 rounded-xl bg-blue-500 text-white text-xl font-semibold">Login</button>
+            </div>
           </form>
         </div>
       </div>

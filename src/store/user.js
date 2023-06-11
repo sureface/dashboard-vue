@@ -32,8 +32,7 @@ export const useUserStore = defineStore('user', {
 
         },
         logout() {
-            // make API call to log out user
-            // if successful, set isAuthenticated to false
+            localStorage.clear()
             this.isAuthenticated = false
         }
     }
